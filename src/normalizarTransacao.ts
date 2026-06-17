@@ -33,7 +33,9 @@ declare global {
   }
 }
 
-export default function normalizarTransacao(transacao: TransacaoAPI) {
+export default function normalizarTransacao(
+  transacao: TransacaoAPI,
+): Transacao {
   return {
     Nome: transacao.Nome,
     id: transacao.ID,
