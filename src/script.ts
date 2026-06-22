@@ -15,6 +15,8 @@ async function handleData() {
 
 function preencherEstatisticas(transacoes: Transacao[]): void {
   const data = new Estatisticas(transacoes);
+  console.log(data);
+
   const totalElement = document.querySelector<HTMLElement>('#total span');
   if (totalElement) {
     totalElement.innerText = data.total.toLocaleString('pt-br', {
@@ -22,7 +24,6 @@ function preencherEstatisticas(transacoes: Transacao[]): void {
       currency: 'BRL',
     });
   }
-  console.log(data.total);
 }
 
 function preencherTabela(transacoes: Transacao[]): void {
